@@ -58,7 +58,7 @@ Keep it short, friendly and easy to understand.
 `;
 
       const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
-      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-pro' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
       const result = await model.generateContent(prompt);
       const text = result.response.text();
 
