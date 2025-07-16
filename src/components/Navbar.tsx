@@ -22,13 +22,13 @@ export function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200/50 shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Activity className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">SwasthSetu</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">SwasthSetu</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,15 +39,15 @@ export function Navbar() {
                 to={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors ${
                   location.pathname === item.href
-                    ? 'text-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'text-indigo-600'
+                    : 'text-gray-700 hover:text-indigo-600'
                 }`}
               >
                 {item.label}
                 {location.pathname === item.href && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600"
                   />
                 )}
               </Link>

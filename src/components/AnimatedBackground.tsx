@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 export function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-cyan-50" />
+      {/* Enhanced Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40" />
       
-      {/* Floating Orbs */}
+      {/* Large Floating Orbs with Enhanced Colors */}
       <motion.div
-        className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/25 to-cyan-400/25 rounded-full blur-3xl"
         animate={{
           x: [0, 100, 0],
           y: [0, -50, 0],
@@ -22,7 +22,7 @@ export function AnimatedBackground() {
       />
       
       <motion.div
-        className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/15 to-purple-400/15 rounded-full blur-3xl"
+        className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl"
         animate={{
           x: [0, -80, 0],
           y: [0, 60, 0],
@@ -36,7 +36,7 @@ export function AnimatedBackground() {
       />
       
       <motion.div
-        className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-full blur-3xl"
+        className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-emerald-400/15 to-teal-400/15 rounded-full blur-3xl"
         animate={{
           x: [0, 120, 0],
           y: [0, -80, 0],
@@ -49,11 +49,11 @@ export function AnimatedBackground() {
         }}
       />
       
-      {/* Floating Particles */}
+      {/* Enhanced Floating Particles with Better Colors */}
       {Array.from({ length: 20 }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-blue-300/30 rounded-full"
+          className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/40 to-indigo-400/40 rounded-full"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -71,10 +71,10 @@ export function AnimatedBackground() {
         />
       ))}
       
-      {/* Simple Dot Pattern */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Enhanced Dot Pattern */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #3B82F6 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #6366F1 1px, transparent 1px)',
           backgroundSize: '60px 60px',
           backgroundPosition: '0 0, 30px 30px'
         }} />
